@@ -1,5 +1,5 @@
 ; Enable {{ item.1.name }} extension module
-{% if item.1.enabled is defined and item.1.enabled %}
+{% if item.1.enabled %}
 extension={{ item.1.name }}.so
 {% else %}
 ; extension={{ item.1.name }}.so
