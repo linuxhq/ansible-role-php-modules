@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/linuxhq/ansible-role-php-modules.svg?branch=master)](https://travis-ci.org/linuxhq/ansible-role-php-modules)
 
-RHEL/CentOS - PHP Modules
+RHEL/CentOS - Configure PHP modules and extensions
 
 ## Requirements
 

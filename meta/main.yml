@@ -2,7 +2,7 @@
 dependencies: []
 galaxy_info:
   author: tkimball83
-  description: RHEL/CentOS - PHP Modules
+  description: RHEL/CentOS - Configure PHP modules and extensions
   license: GPLv3
   min_ansible_version: 2.4
   platforms:
