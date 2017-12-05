@@ -8,6 +8,7 @@
     state: present
   register: php_modules_yum
   with_items: "{{ php_modules }}"
+  when: item.module is defined
 
 - name: Applying php module configurations
   tags: php_modules
@@ -21,5 +22,8 @@
   with_subelements:
     - "{{ php_modules }}"
     - extensions
-  when: php_modules_yum|success
+  when:
+    - item.1.name is defined
+    - item.1.enabled is defined
+    - php_modules_yum|success
 ...
