@@ -1,0 +1,25 @@
+---
+- name: Ensure that the required php modules are installed
+  tags: php_modules
+  become: true
+  yum:
+    name: "php-{{ item.module }}"
+    enablerepo: "{{ php_modules_enablerepo }}"
+    state: present
+  register: php_modules_yum
+  with_items: "{{ php_modules }}"
+
+- name: Applying php module configurations
+  tags: php_modules
+  become: true
+  template:
+    src: php_extension.ini.j2
+    dest: "/etc/php.d/{{ item.1.name }}.ini"
+    owner: root
+    group: root
+    mode: 0644
+  with_subelements:
+    - "{{ php_modules }}"
+    - extensions
+  when: php_modules_yum|success
+...
