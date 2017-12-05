@@ -3,12 +3,12 @@
   tags: php_modules
   become: true
   yum:
-    name: "php-{{ item.module }}"
+    name: "php-{{ item.package }}"
     enablerepo: "{{ php_modules_enablerepo }}"
     state: present
   register: php_modules_yum
   with_items: "{{ php_modules }}"
-  when: item.module is defined
+  when: item.package is defined
 
 - name: Applying php module configurations
   tags: php_modules

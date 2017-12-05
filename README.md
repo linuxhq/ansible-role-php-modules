@@ -26,7 +26,7 @@ None
         - role: linuxhq.php-modules
           php_modules_enablerepo: remi
           php_modules:
-            - module: common
+            - package: common
               extensions:
                 - name: curl
                   enabled: True
@@ -38,7 +38,7 @@ None
                   enabled: False
                 - name: zip
                   enabled: Tre
-            - module: xml
+            - package: xml
               extensions:
                 - name: dom
                   enabled: False
