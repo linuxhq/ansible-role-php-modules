@@ -1,6 +1,6 @@
 ---
 - name: Ensure that the required php modules are installed
-  tags: php_modules
+  tags: php-modules
   become: true
   yum:
     name: "php-{{ item.package }}"
@@ -10,8 +10,8 @@
   with_items: "{{ php_modules }}"
   when: item.package is defined
 
-- name: Applying php module configurations
-  tags: php_modules
+- name: Attempting to overlay php module configurations
+  tags: php-modules
   become: true
   template:
     src: php_extension.ini.j2
@@ -25,5 +25,5 @@
   when:
     - item.1.name is defined
     - item.1.enabled is defined
-    - php_modules_yum|success
+    - php_modules_yum is success
 ...
