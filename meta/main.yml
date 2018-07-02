@@ -1,7 +1,7 @@
 ---
 dependencies: []
 galaxy_info:
-  role: php_modules
+  role_name: php_modules
   author: tkimball83
   description: RHEL/CentOS - Configure PHP modules and extensions
   license: GPLv3
