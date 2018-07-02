@@ -2,5 +2,5 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - ansible-role-php-modules
+    - ansible-role-php_modules
 ...

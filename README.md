@@ -1,7 +1,7 @@
-# ansible-role-php-modules
+# ansible-role-php_modules
 
-[![Build Status](https://travis-ci.org/linuxhq/ansible-role-php-modules.svg?branch=master)](https://travis-ci.org/linuxhq/ansible-role-php-modules)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-php--modules-blue.svg?style=flat)](https://galaxy.ansible.com/linuxhq/php-modules)
+[![Build Status](https://travis-ci.org/linuxhq/ansible-role-php_modules.svg?branch=master)](https://travis-ci.org/linuxhq/ansible-role-php_modules)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-php_modules-blue.svg?style=flat)](https://galaxy.ansible.com/linuxhq/php_modules)
 [![License](https://img.shields.io/badge/license-GPLv3-brightgreen.svg?style=flat)](COPYING)
 
 RHEL/CentOS - Configure PHP modules and extensions
@@ -25,7 +25,7 @@ None
 
     - hosts: servers
       roles:
-        - role: linuxhq.php-modules
+        - role: linuxhq.php_modules
           php_modules_enablerepo: remi
           php_modules:
             - package: common

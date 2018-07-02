@@ -1,6 +1,6 @@
 ---
 - name: Ensure that the required php modules are installed
-  tags: php-modules
+  tags: php_modules
   become: true
   yum:
     name: "php-{{ item.package }}"
@@ -11,7 +11,7 @@
   when: item.package is defined
 
 - name: Attempting to overlay php module configurations
-  tags: php-modules
+  tags: php_modules
   become: true
   template:
     src: php_extension.ini.j2
